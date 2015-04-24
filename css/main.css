@@ -55,9 +55,7 @@ body {
 	display: none;
 	float: left;
 	position: absolute;
+	top: 167px;
+	left: 520px;
 	z-index: 10;
-}
-
-* {
-	outline: red 1px solid;
 }
