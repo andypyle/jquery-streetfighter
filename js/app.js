@@ -3,6 +3,7 @@ $(document).ready(function(){
 		main : $('.ryu'),
 		still : $('.ryu-still'),
 		ready : $('.ryu-ready'),
+		cool: $('.ryu-cool'),
 		throwing : $('.ryu-throwing'),
 		hadouken : $('.hadouken')
 	}
@@ -31,6 +32,24 @@ $(document).ready(function(){
 		ryu.ready.show();
 		ryu.throwing.hide();
 	});
+
+	$('html')
+		.keydown(function(event){
+			if(event.which == 88){
+				event.preventDefault();
+				ryu.still.hide();
+				ryu.ready.hide();
+				ryu.throwing.hide();
+				ryu.cool.show();
+			}
+		})
+		.keyup(function(event){
+			if(event.which == 88){
+				event.preventDefault();
+				ryu.cool.hide();
+				ryu.ready.show();
+			}
+		})
 });
 
 function playHadouken() {
